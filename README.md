@@ -21,11 +21,15 @@ https://testerhome.com/topics/14804
  
 2. Json Fuzz  
   开启 Enable Inject 、Json Mock  
-  对HttpURLConnectionImpl及okhttp3的OkHttpClient 进行hook，对服务端返回做延迟、非json、空json、null、xss等fuzz（支持https）
+  对HttpURLConnectionImpl及okhttp3的OkHttpClient 进行hook，对服务端返回做延迟、非json、空json、null、xss等fuzz（支持https） 
+  fuzz情况通过logcat查看  
+  ![](docs/3.png)  
 
 3. Text Fuzz  
   开启 Text Fuzz  
-  对界面中控件遍历，对edit的控件进行fuzz 填充，如非法字符、超长、空string、null、xss等
+  对界面中控件遍历，对edit的控件进行fuzz 填充，如非法字符、超长、空string、null、xss等  
+  fuzz情况通过logcat查看  
+  ![](docs/4.png)  
 
 4. Gps Mock  
   开启 Gps Mock （该功能与Json Mock 可能冲突，故需关闭Json Mock）  
@@ -39,6 +43,8 @@ https://testerhome.com/topics/14804
 6. 动态Intent Fuzz   
   开启 动态Intent Fuzz （该功能与 静态Intent Fuzz 冲突）  
   运行时hook Intent、bundle组件相关接口，实现运行过程中劫持并畸变intent，如空、非法、null、空数组、非法序列等  
+  fuzz情况通过logcat查看  
+  ![](docs/5.png)
 
 # changelog
 
